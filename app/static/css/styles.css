@@ -1,0 +1,26 @@
+.main {
+    padding: 15px;
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+}
+
+.section {
+    /* text-align: center; */
+    margin-top: 70px;
+}
+
+#inputCity {
+    width: 40%;
+}
+
+.search-button {
+    margin-top: 15px;
+    width: 20%;
+}
+
+.search-results {
+    background-color: aquamarine;
+}

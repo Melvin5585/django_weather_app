@@ -1,0 +1,47 @@
+{
+    "coord": {
+        "lon": 31.0099,
+        "lat": -29.8618
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 16.53,
+        "feels_like": 289.5,
+        "temp_min": 289.68,
+        "temp_max": 289.68,
+        "pressure": 1028,
+        "humidity": 81,
+        "sea_level": 1028,
+        "grnd_level": 1026
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.89,
+        "deg": 25,
+        "gust": 2.22
+    },
+    "clouds": {
+        "all": 10
+    },
+    "dt": 1725303122,
+    "sys": {
+        "type": 1,
+        "id": 1934,
+        "country": "ZA",
+        "sunrise": 1725250197,
+        "sunset": 1725291699
+    },
+    "timezone": 7200,
+    "id": 1020066,
+    "name": "Berea",
+    "cod": 200,
+    "datetime": "2024-09-02 18:52:02.706668"
+}

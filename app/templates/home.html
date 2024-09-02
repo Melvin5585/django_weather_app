@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <h2>WELCOME TO WEATHER APP</h2>
+        </div>
+        <div class="section text-center">
+            <div class="form-group">
+                <form action="{% url 'weather' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="text" class="form-control mx-auto text-center" id="inputCity" style="width: 50%;" placeholder="Enter name of the city." name="city" required>
+                    <input type="submit" class="btn btn-primary search-button" value="Search">
+                </form>
+            </div>
+        </div>
+
+        <hr>
+
+        {% if city_weather %}
+        <div style="padding: 20px;">
+            <h4>Weather search results.</h4>
+            <p>City name: {{ city_weather.name }}</p>
+            <p>Temperature: {{ city_weather.main.temp }}°C</p>
+            <p>Description: {{ city_weather.weather.0.description }}</p>
+            <p>Humidity: {{ city_weather.main.humidity }}%</p>
+            <p>Pressure: {{ city_weather.main.pressure }} hPa</p>
+            <p>Wind Speed: {{ city_weather.wind.speed }} m/s</p>
+            <p>Visibility: {{ city_weather.visibility }} meters</p>
+        </div>
+        {% else %}
+        <div style="padding: 20px;">
+            <h4>Weather search results.</h4>
+            <p>No cities found for the specified country.</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+
+</html>
